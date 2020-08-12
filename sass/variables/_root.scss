@@ -1,0 +1,32 @@
+:root {
+	// Colors - Black
+	--black-h: 0;
+	--black-s: 0%;
+	--black-l: 0%;
+
+	// Colors - White
+	--white-h: 0;
+	--white-s: 0%;
+	--white-l: 100%;
+
+	// Colors
+	--black: hsl(var(--black-h), var(--black-s), var(--black-l));
+	--white: hsl(var(--white-h), var(--white-s), var(--white-l));
+	--gray: hsl(var(--black-h), var(--black-s), calc(var(--black-l) + 20%));
+	--background-color: var(--white);
+
+	// Columns
+	--columns: 12;
+	--col-1: calc((1 / var(--columns)) * 100%);
+	--col-2: calc((2 / var(--columns)) * 100%);
+	--col-3: calc((3 / var(--columns)) * 100%);
+	--col-4: calc((4 / var(--columns)) * 100%);
+	--col-5: calc((5 / var(--columns)) * 100%);
+	--col-6: calc((6 / var(--columns)) * 100%);
+	--col-7: calc((7 / var(--columns)) * 100%);
+	--col-8: calc((8 / var(--columns)) * 100%);
+	--col-9: calc((9 / var(--columns)) * 100%);
+	--col-10: calc((10 / var(--columns)) * 100%);
+	--col-11: calc((11 / var(--columns)) * 100%);
+	--col-12: calc((12 / var(--columns)) * 100%);
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Kipa",
+  "version": "0.0.1",
+  "description": "Test",
+  "main": "dist/css/style.css",
+  "keywords": [
+    "style",
+    "scss",
+    "css",
+    "sass"
+  ],
+  "files": [
+    "sass",
+    "assets",
+    "dist"
+  ],
+  "author": "itzik.pop@gmail.com",
+  "license": "ISC",
+  "scripts": {
+    "clean:dist": "rimraf dist/",
+    "assets": "ncp ./assets/ ./dist/",
+    "sass:build": "node-sass --source-map true --include-path sass/ --output-style normal sass/ -o dist/css/",
+    "sass:watch": "node-sass --source-map true --include-path sass/ --output-style normal --watch sass/ -o dist/css/",
+    "build": "npm-run-all --serial clean:dist sass:build assets",
+    "build:watch": "npm-run-all --serial clean:dist sass:build assets sass:watch"
+  },
+  "devDependencies": {},
+  "publishConfig": {},
+  "engines": {
+    "node": ">=5.0.0"
+  }
+}
