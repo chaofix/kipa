@@ -1,19 +1,14 @@
 :root {
-	// Colors - Black
-	--black-h: 0;
-	--black-s: 0%;
-	--black-l: 0%;
-
-	// Colors - White
-	--white-h: 0;
-	--white-s: 0%;
-	--white-l: 100%;
-
 	// Colors
-	--black: hsl(var(--black-h), var(--black-s), var(--black-l));
-	--white: hsl(var(--white-h), var(--white-s), var(--white-l));
-	--gray: hsl(var(--black-h), var(--black-s), calc(var(--black-l) + 20%));
+	--black: rgb(0, 0, 0);
+	--white: rgb(255, 255, 255);
+	--gray: rgb(233, 236, 242);
+	--maincolor: rgb(35, 77, 166);
+	--maincolor-hover: rgb(35, 77, 166);
+	--secondarycolor: rgb(190, 17, 78);
+	--secondarycolor-hover: rgb(190, 17, 78);
 	--background-color: var(--white);
+	--special-backgroundcolor: rgba(190, 17, 78, 1);;
 
 	// Columns
 	--columns: 12;
@@ -29,4 +24,17 @@
 	--col-10: calc((10 / var(--columns)) * 100%);
 	--col-11: calc((11 / var(--columns)) * 100%);
 	--col-12: calc((12 / var(--columns)) * 100%);
+
+	// General
+	--body-font: 16rem;
+	--space: 20px;
+	--space-none: 0;
+
+	// Header
+	--header-background: var(--maincolor);
+
+	// Article
+	--article-areas: 'article--category' 'article--image' 'article--header' 'article--time';
+	--title-secondary-display: block;
+	--article-columns: auto;
 }

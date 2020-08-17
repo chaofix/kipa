@@ -1,2 +1,40 @@
 // ======================================== [ TITLE ] ========================================
+.title {
+
+	&.main {
+		font: {
+			size: var(--title-main-font-size);
+			weight: var(--title-main-font-weight);
+		}
+	}
+
+	&.secondary {
+		display: var(--title-secondary-display);
+		font: {
+			size: var(--title-secondary-font-size);
+			weight: var(--title-secondary-font-weight);
+		}
+	}
+
+	&.section {
+		grid-column: -1 / 1;
+		font: {
+			size: var(--title-section-font-size);
+			weight: var(--title-section-font-weight);
+		}
+		margin-bottom: 20px;
+		position: relative;
+
+		&:before {
+			background-color: #bbb;
+			bottom: 0;
+			content: '';
+			display: block;
+			height: 10px;
+			position: absolute;
+			width: 100%;
+			z-index: -1;
+		}
+	}
+}
 // ======================================== [ TITLE ] ========================================

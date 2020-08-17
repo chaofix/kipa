@@ -1,0 +1,36 @@
+// ======================================== [ BREAKING NEWS ] ========================================
+.content-breaking-news {
+	display: grid;
+	grid-template-columns: var(--content-columns);
+	grid-gap: 20px;
+
+	@media #{$mobile}, #{$phablet}, #{$tablet} {
+		--title-section-font-size: 24rem;
+		--content-columns: 1fr;
+	}
+
+	@media #{$desktop}, #{$large} {
+		--title-section-font-size: 30rem;
+		--content-columns: 1fr;
+	}
+
+	.article {
+		--title-secondary-display: none;
+
+		@media #{$mobile}, #{$phablet}, #{$tablet} {
+			--article-columns: 100%;
+			--article-areas: 'article--header' 'article--time';
+		}
+
+		@media #{$desktop}, #{$large} {
+			--article-columns: 100%;
+			--article-areas: 'article--header' 'article--time';
+		}
+
+		&__image,
+		&__category {
+			display: none;
+		}
+	}
+}
+// ======================================== [ BREAKING NEWS ] ========================================

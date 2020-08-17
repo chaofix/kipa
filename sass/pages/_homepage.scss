@@ -1,2 +1,40 @@
 // ======================================== [ HOMEPAGE ] ========================================
+.homepage {
+
+	.section {
+
+		&-with-side,
+		&-no-side {
+			align-items: flex-start;
+		}
+
+		&-with-side {
+			display: grid;
+			grid-template-columns: var(--section-columns);
+			grid-gap: 20px;
+
+			@media (max-width: 991px) {
+				--section-columns: 100%;
+			}
+
+			@media (min-width: 992px) {
+				--section-columns: 1fr 300px;
+			}
+		}
+
+		&-no-side {
+			display: grid;
+			grid-template-columns: var(--section-columns);
+			grid-gap: 20px;
+
+			@media (max-width: 991px) {
+				--section-columns: 100%;
+			}
+
+			@media (min-width: 992px) {
+				--section-columns: 100%;
+			}
+		}
+	}
+}
 // ======================================== [ HOMEPAGE ] ========================================

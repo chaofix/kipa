@@ -1,0 +1,47 @@
+// ======================================== [ WORTH ] ========================================
+.content-worth {
+	display: grid;
+	grid-template-columns: var(--content-columns);
+	grid-gap: 20px;
+
+	@media #{$mobile}, #{$phablet}, #{$tablet} {
+		--title-section-font-size: 24rem;
+		--content-columns: 1fr;
+	}
+
+	@media #{$desktop}, #{$large} {
+		--title-section-font-size: 30rem;
+		--content-columns: 1fr;
+	}
+
+	.article {
+		--title-secondary-display: none;
+		grid-column-gap: 20px;
+
+		@media #{$mobile}, #{$phablet}, #{$tablet} {
+			--article-columns: 105px 1fr;
+			--article-areas: 'article--image article--category' 'article--image article--header';
+			--article-image-height: 105px;
+			--article-image-width: 105px;
+			--article-media-height: 100%;
+			--article-media-fit: cover;
+		}
+
+		@media #{$desktop}, #{$large} {
+			--article-columns: 105px 1fr;
+			--article-areas: 'article--image article--category' 'article--image article--header';
+			--article-image-height: 105px;
+			--article-image-width: 105px;
+			--article-media-height: 100%;
+			--article-media-fit: cover;
+		}
+
+		.article {
+
+			&__time {
+				display: none;
+			}
+		}
+	}
+}
+// ======================================== [ WORTH ] ========================================

@@ -1,14 +1,10 @@
-$screen-sm: 480px;
-$screen-md: 768px;
-$screen-lg: 1024px;
-$screen-xl: 1140px;
+$break-small: 576px;
+$break-medium: 768px;
+$break-large: 992px;
+$break-xlarge: 1200px;
 
-$screen-sm-min: $screen-sm;
-$screen-md-min: $screen-md;
-$screen-lg-min: $screen-lg;
-$screen-xl-min: $screen-xl;
-
-$screen-xs-max: ($screen-sm - 1px);
-$screen-sm-max: ($screen-md - 1px);
-$screen-md-max: ($screen-lg - 1px);
-$screen-lg-max: ($screen-xl - 1px);
+$mobile: '(max-width: #{$break-small - 1px})';
+$phablet: '(min-width: #{$break-small}) and (max-width: #{$break-medium - 1px})';
+$tablet: '(min-width: #{$break-medium}) and (max-width: #{$break-large - 1px})';
+$desktop: '(min-width: #{$break-large}) and (max-width: #{$break-xlarge - 1px})';
+$large: '(min-width: #{$break-xlarge})';
