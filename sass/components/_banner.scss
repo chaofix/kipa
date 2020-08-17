@@ -1,0 +1,52 @@
+// ======================================== [ BANNER ] ========================================
+.banner {
+    background: {
+        color: var(--gray);
+    }
+    height: var(--banner-height);
+    margin: {
+        right: auto;
+        left: auto;
+    }
+    width: var(--banner-width);
+
+    &-01 {
+        --banner-height: 90px;
+        --banner-width: 970px;
+
+        @media #{$mobile}, #{$phablet}, #{$tablet} {
+            display: none;
+        }
+
+        @media #{$desktop}, #{$large} {
+            margin: {
+                bottom: calc(var(--space) * 2.5);
+            }
+        }
+    }
+
+    &-02 {
+        --banner-height: 250px;
+        --banner-width: 300px;
+        grid: {
+            area: banner-after-news;
+        }
+    }
+
+    &-03 {
+        margin: {
+            bottom: calc(var(--space) * 2.5);
+        }
+
+        @media #{$mobile}, #{$phablet}, #{$tablet} {
+            --banner-height: 50px;
+            --banner-width: 300px;
+        }
+
+        @media #{$desktop}, #{$large} {
+            --banner-height: 90px;
+            --banner-width: 970px;
+        }
+    }
+}
+// ======================================== [ BANNER ] ========================================

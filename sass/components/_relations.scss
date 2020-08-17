@@ -1,0 +1,45 @@
+// ======================================== [ RELATIONS ] ========================================
+.content-relations {
+	display: grid;
+	grid-template-columns: var(--content-columns);
+	grid-gap: 20px;
+
+	@media #{$mobile}, #{$phablet}, #{$tablet} {
+		--title-section-font-size: 24rem;
+		--content-columns: 1fr;
+	}
+
+	@media #{$desktop}, #{$large} {
+		--title-section-font-size: 30rem;
+		--content-columns: 1fr;
+	}
+
+	.article {
+		--title-secondary-display: none;
+		--relations-image-display: none;
+
+		&:first-of-type {
+			--relations-image-display: block;
+		}
+
+		@media #{$mobile}, #{$phablet}, #{$tablet} {
+			--article-areas: 'article--image' 'article--category' 'article--header';
+		}
+
+		@media #{$desktop}, #{$large} {
+			--article-areas: 'article--image' 'article--category' 'article--header';
+		}
+
+		.article {
+
+			&__image {
+				display: var(--relations-image-display);
+			}
+
+			&__time {
+				display: none;
+			}
+		}
+	}
+}
+// ======================================== [ RELATIONS ] ========================================

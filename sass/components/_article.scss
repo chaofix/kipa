@@ -1,0 +1,38 @@
+// ======================================== [ ARTICLE ] ========================================
+.article {
+	display: grid;
+	grid-template-areas: var(--article-areas);
+	grid-template-columns: var(--article-columns);
+	grid-gap: var(--article-gap);
+
+	&__header {
+		grid-area: article--header;
+		margin-bottom: auto;
+	}
+
+	&__image {
+		height: var(--article-image-height);
+		grid-area: article--image;
+		width: var(--article-image-width);
+
+		.media {
+			height: var(--article-media-height);
+			object-fit: var(--article-media-fit);
+			width: 100%;
+		}
+	}
+
+	&__category {
+		grid-area: article--category;
+	}
+
+	&__time {
+		grid-area: article--time;
+		margin-top: auto;
+	}
+
+	&.main {
+		--article-areas: 'article--category' 'article--image' 'article--header' 'article--time';
+	}
+}
+// ======================================== [ ARTICLE ] ========================================

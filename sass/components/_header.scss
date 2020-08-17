@@ -1,2 +1,78 @@
 // ======================================== [ HEADER ] ========================================
+.header {
+    align-items: center;
+    background: {
+        color: var(--header-background);
+    }
+    display: grid;
+    grid: {
+        template: {
+            areas: var(--header-areas);
+            columns: var(--header-columns);
+            rows: var(--header-rows);
+        }
+    }
+    height: var(--header-height);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    @media #{$mobile}, #{$phablet}, #{$tablet} {
+        margin: {
+            bottom: calc(var(--space) * 1.5);
+        }
+    }
+
+    @media #{$desktop}, #{$large} {
+        margin: {
+            bottom: var(--space);
+        }
+    }
+
+    .logo {
+        grid: {
+            area: logo;
+        }
+
+        .media {
+        }
+    }
+
+    .navigation {
+        grid: {
+            area: menu;
+        }
+
+        &__mobile {
+
+            &--icon {
+            }
+        }
+
+        &__list {
+
+            &--item {
+            }
+
+            &--link {
+            }
+        }
+    }
+
+    .user {
+        grid: {
+            area: user;
+        }
+        margin: {
+            right: auto;
+            left: auto;
+        }
+
+        &__button {
+
+            &--icon {
+            }
+        }
+    }
+}
 // ======================================== [ HEADER ] ========================================

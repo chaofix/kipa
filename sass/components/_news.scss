@@ -1,0 +1,50 @@
+// ======================================== [ NEWS ] ========================================
+.content-news {
+	display: grid;
+	grid-template-columns: var(--content-columns);
+	grid-gap: 20px;
+
+	@media #{$mobile}, #{$phablet}, #{$tablet} {
+		--title-section-font-size: 24rem;
+		--content-columns: 1fr;
+	}
+
+	@media #{$desktop}, #{$large} {
+		--title-section-font-size: 30rem;
+		--content-columns: repeat(3, 1fr);
+	}
+
+	.article {
+		--title-secondary-display: none;
+		grid-column-gap: 20px;
+
+		@media #{$mobile}, #{$phablet}, #{$tablet} {
+			--article-columns: 105px 1fr;
+			--article-areas: 'article--image article--category' 'article--image article--header' 'article--image article--time';
+			--article-image-height: 105px;
+			--article-image-width: 105px;
+			--article-media-height: 100%;
+			--article-media-fit: cover;
+		}
+
+		@media #{$desktop}, #{$large} {
+			--article-areas: 'article--image' 'article--category' 'article--header' 'article--time';
+		}
+
+		&.no-pic {
+			--title-main-font-size: 24rem;
+			background: #ccc;
+			padding: 20px;
+
+			@media (max-width: 991px), (min-width: 992px) {
+				--article-areas: 'article--category' 'article--header' 'article--time';
+				grid-template-rows: 1fr 5fr 1fr;
+			}
+
+			.article__image {
+				display: none;
+			}
+		}
+	}
+}
+// ======================================== [ NEWS ] ========================================

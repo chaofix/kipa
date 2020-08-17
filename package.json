@@ -1,7 +1,7 @@
 {
   "name": "Kipa",
   "version": "0.0.1",
-  "description": "Test",
+  "description": "Kipa",
   "main": "dist/css/style.css",
   "keywords": [
     "style",
@@ -28,5 +28,8 @@
   "publishConfig": {},
   "engines": {
     "node": ">=5.0.0"
+  },
+  "dependencies": {
+    "node-sass": "^4.14.1"
   }
 }

@@ -1,0 +1,35 @@
+// ======================================== [ RECOMMENDED ] ========================================
+.content-recommended {
+	display: grid;
+	grid-template-columns: var(--content-columns);
+	grid-gap: 20px;
+
+	@media #{$mobile}, #{$phablet}, #{$tablet} {
+		--title-section-font-size: 24rem;
+		--content-columns: 1fr;
+	}
+
+	@media #{$desktop}, #{$large} {
+		--title-section-font-size: 30rem;
+		--content-columns: repeat(4, 1fr);
+	}
+
+	.article {
+		--title-secondary-display: none;
+
+		@media #{$mobile}, #{$phablet}, #{$tablet} {
+			--article-columns: 105px 1fr;
+			--article-areas: 'article--image article--category' 'article--image article--header' 'article--image article--time';
+			--article-image-height: 105px;
+			--article-image-width: 105px;
+			--article-media-height: 100%;
+			--article-media-fit: cover;
+			grid-column-gap: 20px;
+		}
+
+		@media #{$desktop}, #{$large} {
+			--article-areas: 'article--image' 'article--category' 'article--header' 'article--time';
+		}
+	}
+}
+// ======================================== [ RECOMMENDED ] ========================================
