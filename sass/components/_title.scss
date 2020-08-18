@@ -22,7 +22,8 @@
 			size: var(--title-section-font-size);
 			weight: var(--title-section-font-weight);
 		}
-		margin-bottom: 20px;
+		height: 40px;
+		margin-bottom: var(--title-section-margin-bottom);
 		position: relative;
 
 		&:before {

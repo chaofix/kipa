@@ -4,8 +4,15 @@
 	.section {
 
 		&-with-side,
-		&-no-side {
+		&-devided,
+		&-full {
 			align-items: flex-start;
+
+			@media #{$desktop}, #{$large} {
+				margin: {
+					bottom: calc(var(--space) * 2.5);
+				}
+			}
 		}
 
 		&-with-side {
@@ -13,25 +20,39 @@
 			grid-template-columns: var(--section-columns);
 			grid-gap: 20px;
 
-			@media (max-width: 991px) {
+			@media #{$mobile}, #{$phablet}, #{$tablet} {
 				--section-columns: 100%;
 			}
 
-			@media (min-width: 992px) {
+			@media #{$desktop}, #{$large} {
 				--section-columns: 1fr 300px;
+			}
+
+			.banner {
+				grid-column: 2;
 			}
 		}
 
-		&-no-side {
+		&-devided {
 			display: grid;
 			grid-template-columns: var(--section-columns);
 			grid-gap: 20px;
 
-			@media (max-width: 991px) {
+			@media #{$desktop}, #{$large} {
+				--section-columns: repeat(4, 1fr);
+			}
+		}
+
+		&-full {
+			display: grid;
+			grid-template-columns: var(--section-columns);
+			grid-gap: 20px;
+
+			@media #{$mobile}, #{$phablet}, #{$tablet} {
 				--section-columns: 100%;
 			}
 
-			@media (min-width: 992px) {
+			@media #{$desktop}, #{$large} {
 				--section-columns: 100%;
 			}
 		}

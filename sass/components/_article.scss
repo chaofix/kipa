@@ -1,5 +1,6 @@
 // ======================================== [ ARTICLE ] ========================================
 .article {
+	align-content: flex-start;
 	display: grid;
 	grid-template-areas: var(--article-areas);
 	grid-template-columns: var(--article-columns);
@@ -23,6 +24,7 @@
 	}
 
 	&__category {
+		color: var(--maincolor);
 		grid-area: article--category;
 	}
 
@@ -32,7 +34,13 @@
 	}
 
 	&.main {
-		--article-areas: 'article--category' 'article--image' 'article--header' 'article--time';
+
+		.article {
+
+			&__category {
+				display: none;
+			}
+		}
 	}
 }
 // ======================================== [ ARTICLE ] ========================================

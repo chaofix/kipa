@@ -10,27 +10,18 @@
     }
     width: var(--banner-width);
 
-    &-01 {
+    &.wide {
         --banner-height: 90px;
         --banner-width: 970px;
 
         @media #{$mobile}, #{$phablet}, #{$tablet} {
             display: none;
         }
-
-        @media #{$desktop}, #{$large} {
-            margin: {
-                bottom: calc(var(--space) * 2.5);
-            }
-        }
     }
 
-    &-02 {
+    &.small {
         --banner-height: 250px;
         --banner-width: 300px;
-        grid: {
-            area: banner-after-news;
-        }
     }
 
     &-03 {
