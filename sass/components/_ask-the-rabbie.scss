@@ -1,5 +1,5 @@
 // ======================================== [ RELATIONS ] ========================================
-.content-relations {
+.content-ask-the-rabbie {
 	display: grid;
 	grid-template-columns: var(--content-columns);
 	grid-gap: 20px;
@@ -17,24 +17,23 @@
 
 	.article {
 		--title-secondary-display: none;
-		--relations-image-display: none;
 
 		&:first-of-type {
 			--relations-image-display: block;
 		}
 
 		@media #{$mobile}, #{$phablet}, #{$tablet} {
-			--article-areas: 'article--image' 'article--category' 'article--header';
+			--article-areas: 'article--header' 'article--category';
 		}
 
 		@media #{$desktop}, #{$large} {
-			--article-areas: 'article--image' 'article--category' 'article--header';
+			--article-areas: 'article--header' 'article--category';
 		}
 
 		.article {
 
 			&__image {
-				display: var(--relations-image-display);
+				display: none;
 			}
 
 			&__time {

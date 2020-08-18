@@ -1,5 +1,5 @@
 // ======================================== [ NEWS ] ========================================
-.content-news {
+.content-our-writers {
 	display: grid;
 	grid-template-columns: var(--content-columns);
 	grid-gap: 20px;
@@ -12,12 +12,23 @@
 	@media #{$desktop}, #{$large} {
 		--title-section-font-size: 38rem;
 		--title-section-font-weight: 900;
-		--content-columns: repeat(3, 1fr);
+		--content-columns: repeat(6, 1fr);
+		--title-main-font-size: 20rem;
+		--title-main-font-weight: 700;
+
+		.title {
+
+			&.section {
+				--title-section-margin-bottom: 40px;
+			}
+		}
 	}
 
 	.article {
 		--title-secondary-display: none;
+		background-color: var(--gray);
 		grid-column-gap: 20px;
+		padding: var(--space);
 
 		@media #{$mobile}, #{$phablet}, #{$tablet} {
 			--article-columns: 105px 1fr;
@@ -29,7 +40,32 @@
 		}
 
 		@media #{$desktop}, #{$large} {
-			--article-areas: 'article--image' 'article--category' 'article--header' 'article--time';
+			--article-areas: 'article--image' 'article--category' 'article--header';
+		}
+
+		&__image {
+			--article-image-height: 70px;
+			--article-image-width: 70px;
+			--article-media-height: 70px;
+			--article-media-fit: cover;
+			border-radius: 100%;
+			margin: calc((var(--space) + (var(--article-image-height) / 2)) * -1) auto 0;
+			overflow: hidden;
+		}
+
+		&__category {
+			margin: 0 auto var(--space);
+		}
+
+		&__header {
+
+			.secondary {
+				--title-secondary-display: none;
+			}
+		}
+
+		&__time {
+			display: none;
 		}
 
 		&.no-pic {

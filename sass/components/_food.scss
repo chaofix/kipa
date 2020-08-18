@@ -15,7 +15,8 @@
 	}
 
 	@media #{$desktop}, #{$large} {
-		--title-section-font-size: 30rem;
+		--title-section-font-size: 38rem;
+		--title-section-font-weight: 900;
 		--content-columns: 2fr 1fr;
 
 		&--pane {

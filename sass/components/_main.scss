@@ -18,6 +18,11 @@
 
 	.article {
 		--article-gap: 20px;
+		--article-title-secondary-display: none;
+
+		.secondary {
+			display: var(--article-title-secondary-display);
+		}
 
 		@media #{$mobile}, #{$phablet}, #{$tablet} {
 			--article-columns: 105px 1fr;
@@ -33,6 +38,7 @@
 		}
 
 		&.main {
+			--article-title-secondary-display: block;
 			grid-column: -1 / 1;
 
 			@media #{$mobile}, #{$phablet}, #{$tablet} {
@@ -45,7 +51,7 @@
 			}
 
 			@media #{$desktop}, #{$large} {
-				--article-areas: 'article--image article--category' 'article--image article--header' 'article--image article--time';
+				--article-areas: 'article--image article--header' 'article--image article--time';
 				--article-columns: 2fr 1fr;
 			}
 		}
