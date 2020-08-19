@@ -17,17 +17,18 @@
 	}
 
 	&.section {
+		--section-space: var(--title-section-margin-bottom);
+		color: var(--title-section-color);
 		grid-column: -1 / 1;
 		font: {
 			size: var(--title-section-font-size);
 			weight: var(--title-section-font-weight);
 		}
 		height: 40px;
-		margin-bottom: var(--title-section-margin-bottom);
 		position: relative;
 
 		&:before {
-			background-color: #bbb;
+			background-color: var(--title-section-background-color);
 			bottom: 0;
 			content: '';
 			display: block;

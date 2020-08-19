@@ -3,12 +3,16 @@
 	--black: rgb(0, 0, 0);
 	--white: rgb(255, 255, 255);
 	--gray: rgb(233, 236, 242);
+	--yellow: rgb(255, 224, 154);
+	--green: rgb(9, 191, 144);
+	--lightblue: rgb(204, 218, 249);
 	--maincolor: rgb(35, 77, 166);
 	--maincolor-hover: rgb(35, 77, 166);
 	--secondarycolor: rgb(190, 17, 78);
 	--secondarycolor-hover: rgb(190, 17, 78);
 	--background-color: var(--white);
 	--special-backgroundcolor: rgba(190, 17, 78, 1);;
+	--categorycolor: var(--maincolor);
 
 	// Columns
 	--columns: 12;
@@ -30,6 +34,10 @@
 	--space: 20px;
 	--space-none: 0;
 	--title-section-margin-bottom: 20px;
+	--title-section-background-color: var(--gray);
+	--title-section-color: var(--black);
+	--box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.17);
+	--section-space: 40px;
 
 	// Header
 	--header-background: var(--maincolor);
@@ -38,4 +46,6 @@
 	--article-areas: 'article--category' 'article--image' 'article--header' 'article--time';
 	--title-secondary-display: block;
 	--article-columns: auto;
+	--article-main-category-display: none;
+	--article-header-color: var(--black);
 }

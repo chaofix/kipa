@@ -1,7 +1,45 @@
 .page {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 var(--space);
+
+    .section {
+
+        & > [class^='section'] {
+            max-width: 1440px;
+            margin: 0 auto;
+
+            @media #{$mobile}, #{$phablet}, #{$tablet} {
+                padding: 0 var(--space);
+            }
+
+            @media #{$desktop}, #{$large} {
+                padding: 0 calc(var(--space) * 4);
+            }
+        }
+
+
+        @media #{$desktop}, #{$large} {
+            margin: 0 0 var(--section-space);
+        }
+
+        &.no-space {
+            --section-space: 0;
+        }
+
+        &.video {
+            background-color: var(--maincolor);
+            padding: {
+                top: calc(var(--space) * 2);
+                bottom: calc(var(--space) * 2);
+            }
+        }
+
+        &.podcast {
+            background-color: var(--green);
+            padding: {
+                top: calc(var(--space) * 2);
+                bottom: calc(var(--space) * 2);
+            }
+        }
+    }
 }
 
 @import 'pages/homepage';
