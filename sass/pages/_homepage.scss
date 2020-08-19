@@ -1,6 +1,12 @@
 // ======================================== [ HOMEPAGE ] ========================================
 .homepage {
 
+	@media #{$mobile}, #{$phablet}, #{$tablet} {
+		.content-breaking-news {
+			display: none;
+		}
+	}
+
 	.section {
 
 		&-with-side,
