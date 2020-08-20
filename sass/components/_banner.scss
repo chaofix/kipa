@@ -12,7 +12,7 @@
 
     &.wide {
         --banner-height: 90px;
-        --banner-width: 970px;
+        --banner-width: 800px;
 
         @media #{$mobile}, #{$phablet}, #{$tablet} {
             display: none;

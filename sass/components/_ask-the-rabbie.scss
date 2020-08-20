@@ -5,18 +5,19 @@
 	grid-gap: 20px;
 
 	@media #{$mobile}, #{$phablet}, #{$tablet} {
-		--title-section-font-size: 24rem;
 		--content-columns: 1fr;
 	}
 
 	@media #{$desktop}, #{$large} {
-		--title-section-font-size: 38rem;
 		--title-section-font-weight: 900;
 		--content-columns: 1fr;
+		--title-main-font-size: 18rem;
+		--title-main-font-weight: 700;
 	}
 
 	.article {
 		--title-secondary-display: none;
+		--categorycolor: var(--black);
 
 		&:first-of-type {
 			--relations-image-display: block;

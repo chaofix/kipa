@@ -5,18 +5,25 @@
 	grid-gap: 20px;
 
 	@media #{$mobile}, #{$phablet}, #{$tablet} {
-		--title-section-font-size: 24rem;
 		--content-columns: 1fr;
 	}
 
 	@media #{$desktop}, #{$large} {
-		--title-section-font-size: 38rem;
 		--title-section-font-weight: 900;
+		--title-main-font-size: 20rem;
+		--title-main-font-weight: 600;
 		--content-columns: 1fr;
 
 		.list {
 			overflow-y: auto;
 			max-height: 300px;
+
+			.article {
+
+				&:not(:last-child) {
+					margin-bottom: calc(var(--space) * 1.5);
+				}
+			}
 		}
 	}
 

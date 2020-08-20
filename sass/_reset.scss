@@ -14,7 +14,7 @@
 html {
 	direction: rtl;
 	font-family: 'Assistant', sans-serif;
-	font-size: 1px;
+	font-size: var(--root-font-size);
 }
 
 body {

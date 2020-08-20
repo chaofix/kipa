@@ -10,32 +10,57 @@
 	}
 
 	@media #{$mobile}, #{$phablet}, #{$tablet} {
-		--title-section-font-size: 24rem;
 		--content-columns: 1fr;
 	}
 
+	@media #{$desktop} {
+
+		&--pane {
+
+			&:first-of-type {
+			}
+
+			&:last-of-type {
+			}
+		}
+	}
+
 	@media #{$desktop}, #{$large} {
-		--title-section-font-size: 38rem;
-		--title-section-font-weight: 900;
 		--content-columns: 2fr 1fr;
 
 		&--pane {
 
 			&:first-of-type {
+				--title-main-font-size: 20rem;
+				--title-main-font-weight: 700;
 				grid-template-columns: repeat(2, 1fr);
 			}
 
 			&:last-of-type {
+				--title-main-font-size: 18rem;
+				--title-main-font-weight: 700;
 
 				.article {
 
-					@media #{$desktop}, #{$large} {
+					@media #{$desktop} {
+						--article-areas: 'article--category' 'article--header';
+						--article-columns: 100%;
+
+						&__image {
+							display: none;
+						}
+					}
+
+					@media #{$large} {
 						--article-areas: 'article--image article--category' 'article--image article--header';
 						--article-columns: 90px 1fr;
 						--article-image-height: 90px;
 						--article-image-width: 90px;
 						--article-media-height: 100%;
 						--article-media-fit: cover;
+					}
+
+					@media #{$desktop}, #{$large} {
 						grid-column-gap: 20px;
 					}
 				}
