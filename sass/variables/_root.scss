@@ -30,6 +30,7 @@
 	--col-12: calc((12 / var(--columns)) * 100%);
 
 	// General
+	--root-font-size: 1px;
 	--body-font: 16rem;
 	--space: 20px;
 	--space-none: 0;
@@ -48,4 +49,41 @@
 	--article-columns: auto;
 	--article-main-category-display: none;
 	--article-header-color: var(--black);
+
+	@media #{$mobile} {
+	}
+
+	@media #{$phablet} {
+	}
+
+	@media #{$tablet} {
+	}
+
+	@media #{$desktop} {
+		// --root-font-size: 0.7px;
+	}
+
+	@media #{$large} {
+	}
+
+	@media #{$mobile}, #{$phablet}, #{$tablet} {
+		--title-secondary-font-size: 18rem;
+		--title-section-font-size: 33rem;
+		--title-section-font-weight: 900;
+		--title-section-position: 5px;
+		--title-main-font-size: 18rem;
+		--title-main-font-weight: 700;
+		--article-category-font-size: 15rem;
+	}
+
+	@media #{$desktop}, #{$large} {
+		--title-section-font-size: 38rem;
+		--title-section-font-weight: 900;
+		--title-section-position: 0;
+		--title-main-font-size: 36rem;
+		--title-main-font-weight: 700;
+		--title-secondary-font-size: 20rem;
+		--article-category-font-size: 17rem;
+		--article-time-font-size: 15rem;
+	}
 }

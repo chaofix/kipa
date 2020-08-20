@@ -5,14 +5,18 @@
 	grid-gap: 20px;
 
 	@media #{$mobile}, #{$phablet}, #{$tablet} {
-		--title-section-font-size: 24rem;
 		--content-columns: 1fr;
 	}
 
-	@media #{$desktop}, #{$large} {
-		--title-section-font-size: 38rem;
-		--title-section-font-weight: 900;
+	@media #{$desktop} {
+		--content-columns: repeat(2, 1fr);
+	}
+
+	@media #{$large} {
 		--content-columns: repeat(3, 1fr);
+	}
+
+	@media #{$desktop}, #{$large} {
 	}
 
 	.article {
@@ -30,6 +34,8 @@
 
 		@media #{$desktop}, #{$large} {
 			--article-areas: 'article--image' 'article--category' 'article--header' 'article--time';
+			--title-main-font-size: 20rem;
+			--title-main-font-weight: 700;
 		}
 
 		&.no-pic {
@@ -50,6 +56,7 @@
 		&:first-of-type {
 
 			@media #{$mobile}, #{$phablet}, #{$tablet} {
+				--title-main-font-size: 22rem;
 				--article-columns: unset;
 				--article-areas: 'article--image' 'article--category' 'article--header' 'article--time';
 				--article-image-height: auto;

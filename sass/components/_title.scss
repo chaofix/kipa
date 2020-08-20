@@ -29,7 +29,7 @@
 
 		&:before {
 			background-color: var(--title-section-background-color);
-			bottom: 0;
+			bottom: var(--title-section-position);
 			content: '';
 			display: block;
 			height: 10px;

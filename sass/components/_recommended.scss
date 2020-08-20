@@ -5,13 +5,10 @@
 	grid-gap: 20px;
 
 	@media #{$mobile}, #{$phablet}, #{$tablet} {
-		--title-section-font-size: 24rem;
 		--content-columns: 1fr;
 	}
 
 	@media #{$desktop}, #{$large} {
-		--title-section-font-size: 38rem;
-		--title-section-font-weight: 900;
 		--content-columns: repeat(4, 1fr);
 	}
 
@@ -30,6 +27,8 @@
 
 		@media #{$desktop}, #{$large} {
 			--article-areas: 'article--image' 'article--category' 'article--header' 'article--time';
+			--title-main-font-size: 20rem;
+			--title-main-font-weight: 700;
 		}
 	}
 }

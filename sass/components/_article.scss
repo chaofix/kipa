@@ -4,7 +4,8 @@
 	display: grid;
 	grid-template-areas: var(--article-areas);
 	grid-template-columns: var(--article-columns);
-	grid-gap: var(--article-gap);
+	grid-column-gap: var(--article-gap-column);
+	grid-row-gap: var(--article-gap-row);
 
 	&__header {
 		color: var(--article-header-color);
@@ -26,10 +27,12 @@
 
 	&__category {
 		color: var(--categorycolor);
+		font-size: var(--article-category-font-size);
 		grid-area: article--category;
 	}
 
 	&__time {
+		font-size: var(--article-time-font-size);
 		grid-area: article--time;
 		margin-top: auto;
 	}

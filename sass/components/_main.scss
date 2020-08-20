@@ -6,23 +6,17 @@
 
 	@media #{$mobile}, #{$phablet}, #{$tablet} {
 		--content-columns: 1fr;
-		--title-main-font-size: 20rem;
-		--title-main-font-weight: 700;
 	}
 
 	@media #{$desktop}, #{$large} {
 		--content-columns: repeat(3, 1fr);
-		--title-main-font-size: 36rem;
-		--title-main-font-weight: 700;
+		--title-main-font-size: 20rem;
 	}
 
 	.article {
-		--article-gap: 20px;
+		--article-gap-column: 20px;
 		--article-title-secondary-display: none;
-
-		.secondary {
-			display: var(--article-title-secondary-display);
-		}
+		--title-secondary-display: var(--article-title-secondary-display);
 
 		@media #{$mobile}, #{$phablet}, #{$tablet} {
 			--article-columns: 105px 1fr;
@@ -42,6 +36,8 @@
 			grid-column: -1 / 1;
 
 			@media #{$mobile}, #{$phablet}, #{$tablet} {
+				--title-secondary-font-size: 16rem;
+				--title-main-font-size: 22rem;
 				--article-columns: auto;
 				--article-areas: 'article--image' 'article--category' 'article--header' 'article--time';
 				--article-image-height: auto;
@@ -50,9 +46,18 @@
 				--article-media-fit: unset;
 			}
 
-			@media #{$desktop}, #{$large} {
+			@media #{$desktop} {
+				--article-areas: 'article--image' 'article--header' 'article--time';
+				--article-columns: 1fr;
+			}
+
+			@media #{$large} {
 				--article-areas: 'article--image article--header' 'article--image article--time';
 				--article-columns: 2fr 1fr;
+			}
+
+			@media #{$desktop}, #{$large} {
+				--title-main-font-size: 36rem;
 			}
 		}
 

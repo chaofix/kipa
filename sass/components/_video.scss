@@ -7,7 +7,7 @@
 	grid-gap: 20px;
 
 	@media #{$mobile}, #{$phablet}, #{$tablet} {
-		--content-columns: 1fr;
+		--content-columns: repeat(2, 1fr);
 		--title-main-font-size: 20rem;
 		--title-main-font-weight: 700;
 	}
@@ -16,8 +16,6 @@
 		--content-columns: repeat(4, 1fr);
 		--title-main-font-size: 36rem;
 		--title-main-font-weight: 700;
-		--title-section-font-size: 38rem;
-		--title-section-font-weight: 900;
 	}
 
 	.article {
@@ -31,36 +29,31 @@
 
 		@media #{$mobile}, #{$phablet}, #{$tablet} {
 			--article-gap: 20px;
-			--article-columns: 105px 1fr;
 			--article-areas: 'article--image' 'article--category' 'article--header';
-			--article-image-height: 105px;
-			--article-image-width: 105px;
-			--article-media-height: 100%;
-			--article-media-fit: cover;
 		}
 
 		@media #{$desktop}, #{$large} {
 			--article-gap: 5px;
 			--article-columns: 100%;
 			--article-areas: 'article--image' 'article--category' 'article--header';
-		}
 
-		&:nth-child(even) {
-			grid-column: 3 / 4;
-		}
+			&:nth-child(even) {
+				grid-column: 3 / 4;
+			}
 
-		&:nth-child(odd) {
-			grid-column: 4 / 5;
-		}
+			&:nth-child(odd) {
+				grid-column: 4 / 5;
+			}
 
-		&:nth-child(2),
-		&:nth-child(3) {
-			grid-row: 2 / 3;
-		}
+			&:nth-child(2),
+			&:nth-child(3) {
+				grid-row: 2 / 3;
+			}
 
-		&:nth-child(4),
-		&:nth-child(5) {
-			grid-row: 3 / 4;
+			&:nth-child(4),
+			&:nth-child(5) {
+				grid-row: 3 / 4;
+			}
 		}
 
 		&.main {
@@ -72,6 +65,7 @@
 				--article-image-width: 100%;
 				--article-media-height: auto;
 				--article-media-fit: unset;
+				grid-column: -1 / 1;
 			}
 
 			@media #{$desktop}, #{$large} {

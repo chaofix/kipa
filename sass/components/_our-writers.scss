@@ -1,26 +1,36 @@
 // ======================================== [ NEWS ] ========================================
 .content-our-writers {
-	display: grid;
-	grid-template-columns: var(--content-columns);
-	grid-gap: 20px;
 
-	@media #{$mobile}, #{$phablet}, #{$tablet} {
-		--title-section-font-size: 24rem;
-		--content-columns: 1fr;
+	.title {
+
+		&.section {
+			--title-section-margin-bottom: 40px;
+		}
 	}
 
-	@media #{$desktop}, #{$large} {
-		--title-section-font-size: 38rem;
-		--title-section-font-weight: 900;
-		--content-columns: repeat(6, 1fr);
-		--title-main-font-size: 20rem;
-		--title-main-font-weight: 700;
+	.list {
 
-		.title {
+		@media #{$mobile}, #{$phablet}, #{$tablet} {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			grid-gap: 20px;
+			margin-top: -40px;
+			padding-top: 40px;
+			overflow-x: scroll;
+			overflow-y: visible;
 
-			&.section {
-				--title-section-margin-bottom: 40px;
+			.article {
+				width: 200px;
 			}
+		}
+
+		@media #{$desktop}, #{$large} {
+			--content-columns: repeat(6, 1fr);
+			--title-main-font-size: 20rem;
+			--title-main-font-weight: 700;
+			display: grid;
+			grid-template-columns: var(--content-columns);
+			grid-gap: 20px;
 		}
 	}
 
@@ -31,12 +41,7 @@
 		padding: var(--space);
 
 		@media #{$mobile}, #{$phablet}, #{$tablet} {
-			--article-columns: 105px 1fr;
-			--article-areas: 'article--image article--category' 'article--image article--header' 'article--image article--time';
-			--article-image-height: 105px;
-			--article-image-width: 105px;
-			--article-media-height: 100%;
-			--article-media-fit: cover;
+			--article-areas: 'article--image' 'article--category' 'article--header';
 		}
 
 		@media #{$desktop}, #{$large} {
@@ -66,21 +71,6 @@
 
 		&__time {
 			display: none;
-		}
-
-		&.no-pic {
-			--title-main-font-size: 24rem;
-			background: #ccc;
-			padding: 20px;
-
-			@media (max-width: 991px), (min-width: 992px) {
-				--article-areas: 'article--category' 'article--header' 'article--time';
-				grid-template-rows: 1fr 5fr 1fr;
-			}
-
-			.article__image {
-				display: none;
-			}
 		}
 	}
 }
